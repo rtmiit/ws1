@@ -1,8 +1,8 @@
-const version = '20220204105108';
+const version = '20220204134121';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/general/2016/08/29/example-post-three/","/history/external%20sources/2016/08/28/example-post-two/","/general/external%20sources/2016/08/27/example-post-one/","/categories/","/components/","/elements/","/blog/","/","/manifest.json","/offline/","/overview/","/ppb/","/assets/search.json","/search/","/assets/styles.css","/thanks/","/redirects.json","/sitemap.xml","/robots.txt","/blog/page2/","/feed.xml","/assets/styles.css.map","/assets/logos/iith3.png", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/ws1/general/2016/08/29/example-post-three/","/ws1/history/external%20sources/2016/08/28/example-post-two/","/ws1/general/external%20sources/2016/08/27/example-post-one/","/ws1/categories/","/ws1/components/","/ws1/elements/","/ws1/blog/","/ws1/","/ws1/manifest.json","/ws1/offline/","/ws1/overview/","/ws1/ppb/","/ws1/assets/search.json","/ws1/search/","/ws1/assets/styles.css","/ws1/thanks/","/ws1/redirects.json","/ws1/blog/page2/","/ws1/feed.xml","/ws1/sitemap.xml","/ws1/robots.txt","/ws1/assets/styles.css.map","/ws1/assets/logos/iith3.png", "/ws1/assets/default-offline-image.png", "/ws1/assets/scripts/fetch.js"
   ]
 }
 
@@ -60,7 +60,7 @@ self.addEventListener("fetch", event => {
 
   if (request.url.match(/\.(jpe?g|png|gif|svg)$/)) {
     // If url requested is an image and isn't cached, return default offline image
-    offlineAsset = "/assets/default-offline-image.png";
+    offlineAsset = "/ws1/assets/default-offline-image.png";
   }
 
   // For all urls request image from network, then fallback to cache, then fallback to offline page
