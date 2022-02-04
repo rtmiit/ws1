@@ -1,0 +1,204 @@
+I"]<p>Establishing Suzuki’s R&amp;D Headquarter in India at IIT Hyderabad</p>
+
+<!--
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+<small>A small element</small>
+
+[A link](https://david.darn.es "A link")
+
+Lorem ipsum dolor sit amet, consectetur adip* isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.
+
+Duis aute irure dolor in [A link](https://david.darn.es "A link") reprehenderit in voluptate velit esse cillum **bold text** dolore eu fugiat nulla pariatur. Excepteur span element sint occaecat cupidatat non proident, sunt _italicised text_ in culpa qui officia deserunt mollit anim id `some code` est laborum.
+
+* An item
+* An item
+* An item
+* An item
+* An item
+
+1. Item one
+2. Item two
+3. Item three
+4. Item four
+5. Item five
+
+> A simple blockquote
+
+Some HTML...
+
+``` html
+<blockquote cite="http://www.imdb.com/title/tt0284978/quotes/qt1375101">
+  <p>You planning a vacation, Mr. Sullivan?</p>
+  <footer>
+    <a href="http://www.imdb.com/title/tt0284978/quotes/qt1375101">Sunways Security Guard</a>
+  </footer>
+</blockquote>
+```
+
+...CSS...
+
+``` css
+blockquote {
+  text-align: center;
+  font-weight: bold;
+}
+blockquote footer {
+  font-size: .8rem;
+}
+```
+
+...and JavaScript
+
+``` js
+const blockquote = document.querySelector("blockquote")
+const bolden = (keyString, string) =>
+  string.replace(new RegExp(keyString, 'g'), '<strong>'+keyString+'</strong>')
+
+blockquote.innerHTML = bolden("Mr. Sullivan", blockquote.innerHTML)
+```
+
+`Single line of code`
+
+## HTML Includes
+
+### Contact form
+
+
+
+
+
+
+
+<form class="form  form--contact" method="post" name="Contact" action="/thanks/"
+  
+>
+  <fieldset class="fieldset  form__fieldset">
+    <legend class="legend form__legend">Contact</legend>
+    <label class="label" for="name--contact">Name: <span class="required">*</span></label>
+    <input class="input" id="name--contact" type="text" name="name" value="" placeholder="Your Name" required="required" />
+
+    <label class="label" for="email--contact">Email Address: <span class="required">*</span></label>
+    <input class="input" id="email--contact" type="email" name="email" value="" placeholder="email@website.com" required="required" />
+
+    <label class="label" for="message--contact">Message: <span class="required">*</span></label>
+    <textarea class="textarea" id="message--contact" name="message" placeholder="Your message..." required="required"></textarea>
+
+    <input class="button" type="submit" value="Send message" />
+    <br/>
+    <small class="small"><span class="required">*</span> indicates a required field</small>
+
+    
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="Alembic submission from Contact">
+      <input type="hidden" name="_next" value="/thanks/" />
+    
+  </fieldset>
+</form>
+
+  <script>
+    var email = "moc.senraddivad@em";
+    var unraveledEmail = email.split("").reverse().join("");
+    var form = document.querySelector(".form--contact");
+      form.setAttribute("action", "https://formspree.io/" + unraveledEmail);
+  </script>
+  <noscript>Please enable JavaScript to use the form.</noscript>
+
+
+
+``` html
+{% include site-form.html %}
+```
+
+### Demo map embed
+
+<div class="map"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1UT-2Z-Vg_MG_TrS5X2p8SthsJhc" title="Coffee shop map"></iframe></div>
+
+
+``` html
+{% include map.html id="XXXXXX" title="Coffee shop map" %}
+```
+
+### Button include
+
+<a class="button" href="https://david.darn.es">A button</a>
+
+
+<a class="button" href="https://twitter.com/daviddarnes">A button with icon&nbsp; <svg width="16" height="16" class="icon  icon--twitter" role="img" alt="twitter"><title>twitter</title><use xlink:href="#twitter" fill="CurrentColor"></use></svg>
+</a>
+
+
+``` html
+{% include button.html text="A button" link="https://david.darn.es" %}
+{% include button.html text="A button with icon" link="https://twitter.com/daviddarnes" icon="twitter" %}
+```
+
+### Icon include
+
+<svg width="16" height="16" class="icon  icon--twitter" role="img" alt="twitter"><title>twitter</title><use xlink:href="#twitter" fill="CurrentColor"></use></svg>
+ [<svg width="16" height="16" class="icon  icon--linkedin" role="img" alt="twitter"><title>twitter</title><use xlink:href="#linkedin" fill="CurrentColor"></use></svg>
+](https://www.linkedin.com/in/daviddarnes)
+
+``` html
+{% include icon.html id="twitter" title="twitter" %}
+[{% include icon.html id="linkedin" title="twitter" %}](https://www.linkedin.com/in/daviddarnes)
+```
+
+### Video include
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/zrkcGL5H3MU" frameborder="0" allowfullscreen title="Siteleaf tutorial video"></iframe>
+</div>
+
+
+``` html
+{% include video.html id="zrkcGL5H3MU" title="Siteleaf tutorial video" %}
+```
+
+
+### Image includes
+
+<figure class="figure  figure--center">
+  <img class="image" src="https://picsum.photos/600/800?image=894" alt="Image with caption" width="300" height="800">
+  <figcaption class="caption">Image with caption</figcaption>
+</figure>
+
+
+<figure class="figure  figure--right">
+  <img class="image" src="https://picsum.photos/600/800?image=894" alt="Right aligned image" width="300" height="800">
+  <figcaption class="caption">Right aligned image</figcaption>
+</figure>
+
+
+<figure class="figure  figure--left">
+  <img class="image" src="https://picsum.photos/600/800?image=894" alt="Left aligned image" width="300" height="800">
+  <figcaption class="caption">Left aligned image</figcaption>
+</figure>
+
+
+<figure class="figure  figure--center">
+  <img class="image" src="https://picsum.photos/1600/800?image=894" alt="Image with just alt text" width="" height="">
+  
+</figure>
+
+
+``` html
+{% include figure.html image="https://picsum.photos/600/800?image=894" caption="Image with caption" width="300" height="800" %}
+
+{% include figure.html image="https://picsum.photos/600/800?image=894" caption="Right aligned image" position="right" width="300" height="800" %}
+
+{% include figure.html image="https://picsum.photos/600/800?image=894" caption="Left aligned image" position="left" width="300" height="800" %}
+
+{% include figure.html image="https://picsum.photos/1600/800?image=894" alt="Image with just alt text" %}
+```-->
+:ET
